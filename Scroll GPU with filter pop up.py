@@ -13,7 +13,7 @@ os.environ["PYOPENCL_CTX"] = "0"
 class MyModel(QAbstractTableModel):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.buffer_size = 100000000
+        self.buffer_size = 10000
         self.starting_point = int('0000000000000000000000000000000000000000000000000000000000000001', 16)
         self.buffer = list(range(self.starting_point, self.starting_point + self.buffer_size))
         self.addresses_c = {}  # Compressed addresses
