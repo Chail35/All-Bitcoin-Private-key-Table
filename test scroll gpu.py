@@ -15,7 +15,7 @@ class MyModel(QAbstractTableModel):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.buffer_size = 2000
-        self.starting_point = int('e9654a600959c79209136e6e6e459f98c41a6d8936e4739721633fca847498c0', 16)
+        self.starting_point = int('0000000000000000000000000000000000000000000000000000000000000001', 16)
         self.buffer = list(range(self.starting_point, self.starting_point + self.buffer_size))
         self.addresses_c = {}  # Compressed addresses
         self.addresses_u = {}  # Uncompressed addresses
